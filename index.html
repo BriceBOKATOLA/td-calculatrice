@@ -1,0 +1,50 @@
+ <!--
+Rodson 
+Adrien
+  -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice avec Vue</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- cdn vuejs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- custom js -->
+    <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+    <!-- calculatrice -->
+    <section class="calculatrice" id="monApp">
+        <!-- affichage -->
+        <div class="result blue">
+            <p>{{result}}</p>
+        </div>
+        <!-- clavier -->
+        <div class="clavier">
+            <div class="btn blue" @click="clear">AC</div>
+            <div class="btn blue" @click="inversion">+/-</div>
+            <div class="btn blue" @click="pourcentage">%</div>
+            <div class="btn blue" @click="setOperator('/')">÷</div>
+            <div class="btn" @click="writeNumber(7)">7</div>
+            <div class="btn" @click="writeNumber(8)">8</div> 
+            <div class="btn" @click="writeNumber(9)">9</div>
+            <div class="btn blue" @click="setOperator('*')">x</div>
+            <div class="btn" @click="writeNumber(4)">4</div>
+            <div class="btn" @click="writeNumber(5)">5</div>
+            <div class="btn" @click="writeNumber(6)">6</div>
+            <div class="btn blue" @click="setOperator('-')">-</div>
+            <div class="btn" @click="writeNumber(1)">1</div>
+            <div class="btn" @click="writeNumber(2)">2</div>
+            <div class="btn" @click="writeNumber(3)">3</div>
+            <div class="btn blue" @click="setOperator('+')">+</div>
+            <div class="btn" @click="writeNumber(0)">0</div>
+            <div class="btn" @click="writeDot">,</div>
+            <div class="btn equal-btn" @click="equal">=</div>
+        </div>
+    </section>
+</body>
+</html>
